@@ -102,7 +102,7 @@ module.exports = (grunt) => {
         'jshint:all', 'rollup:dev', 'concat:all', 'sass:dev'    
     ]);
     
-    grunt.registerTask('code', 'Watch for changes', [
-        'watch'    
+    grunt.registerTask('code', 'Builds as Dev then watches for changes', [
+        'dev', 'watch'    
     ])
 };
