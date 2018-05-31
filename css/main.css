@@ -6453,3 +6453,9 @@ a.text-dark:hover, a.text-dark:focus {
 html, body {
   margin: 0;
   padding: 0; }
+
+.button {
+  display: block;
+  float: left;
+  padding: 40px auto;
+  min-width: 10em; }
