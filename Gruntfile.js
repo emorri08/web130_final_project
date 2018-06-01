@@ -3,7 +3,7 @@
 let babel = require('rollup-plugin-babel'),
     js_libs = [
         'node_modules/jquery/dist/jquery.js',
-        'node_modules/bootstrap/dist/js/bootstrap.js',
+        'node_modules/bootstrap/dist/js/boostrap.js',
         'js/build/temp.js'
     ];
 
@@ -78,6 +78,7 @@ module.exports = (grunt) => {
                 tasks: ['dev_js'],
                 files: [
                     'js/*.js',
+                    'js/**/*.js',
                     '!js/build/*.js'
                 ]
             },
@@ -103,7 +104,7 @@ module.exports = (grunt) => {
         'jshint:all', 'rollup:dev', 'concat:all', 'sass:dev'    
     ]);
     
-    grunt.registerTask('code', 'Watch for changes', [
+    grunt.registerTask('code', 'Builds as dev then watches for changes', [
         'dev', 'watch'    
     ]);
 };
