@@ -49,3 +49,12 @@
         @include format(small) 
             float: left
             width: percentage(($i/12))
+            
+
+@mixin clearfix
+    &:after
+        content: ""
+        display: table
+        clear: both
+
+
