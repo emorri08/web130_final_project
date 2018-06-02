@@ -1,2 +1,2 @@
-// final project app.js
-var five = 5;
+import './graphql/articles';
+import './graphql/login';
