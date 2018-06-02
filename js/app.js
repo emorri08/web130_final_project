@@ -1,1 +1,1 @@
-import 'articles';
+import './graphql/articles';

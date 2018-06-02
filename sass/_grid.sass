@@ -1,16 +1,55 @@
-@mixin size($size)
-    @if $size == small
-        @media screen and (max-width: 39.99em)
+
+@mixin format($format) 
+    @if $format == small 
+        @media screen and (max-width: 39.99em) 
             @content
-    @else if $size == medium
-        @media screen and (min-width: 40em) and (max-width: 63.99em)
+        
+    @else if $format == medium 
+        @media screen and (min-width: 40em) and (max-width: 63.99em) 
             @content
-    @else if $size == large
-        @media screen and (min-width: 64em)
+        
+    @else if $format == large 
+        @media screen and (min-width: 64em) 
             @content
-    @else if $size == medium-up
-        @media screen and (min-width: 40em)
+        
+    @else if $format == medium-up 
+        @media screen and (min-width: 40em) 
             @content
+            
+            
+            
+        
+@mixin show($show) 
+    @if $format == small 
+        @media screen and (max-width: 39.99em) 
+            @content
+            
+            
+            
+
+@mixin hamburger($hamburger) 
+    @if $hamburger == mobile-only 
+            background-image: url("../images/Hamburger.png")
+            background-repeat: no-repeat
+            
+            
+            
+
+@for $i from 1 through 12 
+    .col-lg-#{$i}
+        float: left
+        width: percentage(($i/12))
+    
+    .col-md-#{$i}
+        @include format(medium) 
+            float: left
+            width: percentage(($i/12))
+            
+    .col-sm-#{$i} 
+        @include format(small) 
+            float: left
+            width: percentage(($i/12))
+            
 
 @mixin clearfix
     &:after
@@ -18,15 +57,4 @@
         display: table
         clear: both
 
-@for $i from 1 through 12
-    .col-lg-#{$i}
-        float: left
-        width: percentage(($i/12))
-    .col-md-#{$i}
-        @include size(medium)
-            float: left
-            width: percentage(($i/12))
-    .col-sm-#{$i}
-        @include size(small)
-            float: left
-            width: percentage(($i/12))
+

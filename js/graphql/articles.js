@@ -10,13 +10,13 @@ let getAllArticles = `
     }
 `;
 
-$(document).ready(function () {
+$(document).ready(function() {
     $.post({
         url: 'https://api.graph.cool/simple/v1/cjhjspp3l43x40186ohece9if',
         data: JSON.stringify({
             query: getAllArticles
         }),
-        success: response => {
+        success: (response) => {
             let articles = response.data.allArticles;
             console.log(articles);
             let html = '';

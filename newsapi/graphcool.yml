@@ -19,11 +19,25 @@ types: ./types.graphql
 
 
 functions:
-  hello:
-    handler:
-      code: src/hello.js
+
+  # added by email-password template:
+  signup:
     type: resolver
-    schema: src/hello.graphql
+    schema: src/email-password/signup.graphql
+    handler:
+      code: src/email-password/signup.ts
+
+  authenticate:
+    type: resolver
+    schema: src/email-password/authenticate.graphql
+    handler:
+      code: src/email-password/authenticate.ts
+
+  loggedInUser:
+    type: resolver
+    schema: src/email-password/loggedInUser.graphql
+    handler:
+      code: src/email-password/loggedInUser.ts
 
 
 # Model/Relation permissions are used to limit the API access
@@ -32,7 +46,27 @@ functions:
 # Read more here:
 # https://www.graph.cool/docs/reference/auth/authorization/overview-iegoo0heez
 permissions:
-  - operation: "*"
+  # User
+  - operation: User.read
+    authenticated: true
+  - operation: User.create
+  - operation: User.update
+    authenticated: true
+    fields:
+      - name
+      - email
+  - operation: User.delete
+    authenticated: true
+  # Article
+  - operation: Article.read
+  - operation: Article.create
+    authenticated: true
+  - operation: Article.update
+    authenticated: true
+  - operation: Article.delete
+    authenticated: true
+  - operation: UserArticles.*
+    authenticated: true
 
 
 # Your root tokens used for functions to get full access to the API
