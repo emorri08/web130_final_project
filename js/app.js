@@ -1,2 +1,1 @@
-// final project app.js
-var five = 5;
+import 'articles';
