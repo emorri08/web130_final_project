@@ -1,6 +1,7 @@
 // David Holter and Elly Boyd
 // articles.js for final project
-// global $
+/*global $*/
+/*global JS_PAGE*/
 
 let getAllArticles = `
     query AllArticles {
