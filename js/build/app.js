@@ -14328,7 +14328,7 @@ $(document).ready(function () {
     }
 });
 
-// David Holter & Elly Boyd
+// Elly Boyd & David Holter
 // login.js for final project
 // global $ JS_PAGE
 
