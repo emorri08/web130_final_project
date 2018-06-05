@@ -1,6 +1,7 @@
 // David Holter and Elly Boyd
 // articles.js for final project
-// global $
+/*global $*/
+/*global JS_PAGE*/
 
 let getAllArticles = `
     query AllArticles {
@@ -37,7 +38,7 @@ $(document).ready(function () {
 
 // Elly Boyd & David Holter
 // login.js for final project
-// global $ JS_PAGE
+// global $ JS_PAGE, cookies
 
 let loginMutation = `
     mutation AuthenticateUser($email: String!, $password: String!) {
@@ -70,6 +71,8 @@ $(document).ready(function () {
                         alert('Login failed! Try again.');
                     } else {
                         console.log(user);
+                        Cookies.set('authorID', user.ID, { expires: 7 });
+                        Cookies.set('token', user.token, { expires: 7 });
                     }
                 },
                 contentType: 'application/json'

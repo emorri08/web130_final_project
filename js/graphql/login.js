@@ -1,6 +1,6 @@
 // Elly Boyd & David Holter
 // login.js for final project
-// global $ JS_PAGE
+/*global $, JS_PAGE, Cookies*/
 
 let loginMutation = `
     mutation AuthenticateUser($email: String!, $password: String!) {
@@ -33,6 +33,8 @@ $(document).ready(function() {
                         alert('Login failed! Try again.');
                     } else {
                         console.log(user);
+                        Cookies.set('authorID', user.ID, {expires: 7});
+                        Cookies.set('token', user.token, {expires: 7});
                     }
                 },
                 contentType: 'application/json'
