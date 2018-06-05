@@ -1,0 +1,37 @@
+html, body 
+    margin: 0
+    padding: 0
+
+
+ul, li 
+    box-sizing: border-box
+    list-style-type: none
+    margin: 0
+    padding: 0
+
+nav 
+    > ul 
+        height: 36px
+        @include clearfix
+        background: $bluGrn
+    
+    > ul > li 
+        font-size: 1.15em
+        &:last-child a         
+    
+    > ul#mainNav > li 
+        display: inline-block 
+    a 
+        font-family: 'Inconsolata', monospace
+        box-sizing: border-box
+        height: 36px
+        background: $bluGrn
+        color: $white
+        text-decoration: none
+        display: block
+        padding: 6px 8px
+        text-align: center
+        &:hover 
+            background: $mustard
+            color: $black
+            text-decoration: none
