@@ -6504,5 +6504,10 @@ html, body {
   padding: 0; }
 
 img.masthead {
-  margin: auto;
-  max-width: 1200px; }
+  margin: 0 auto;
+  max-width: 1200px;
+  display: block; }
+  img.masthead::after {
+    display: block;
+    clear: both;
+    content: ""; }
