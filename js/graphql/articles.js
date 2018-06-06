@@ -1,7 +1,7 @@
 // David Holter and Elly Boyd
 // articles.js for final project
-/*global $*/
-/*global JS_PAGE Cookies */
+// *global $*/
+// *global JS_PAGE Cookies */
 
 let getAllArticles = `
     query AllArticles {
