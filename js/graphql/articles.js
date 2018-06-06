@@ -23,7 +23,7 @@ $(document).ready(function() {
     // List View
     if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'list_view') {
         $.post({
-            url: 'https://api.graph.cool/simple/v1/cjhjspp3l43x40186ohece9if',
+            url: 'https://api.graph.cool/simple/v1/cjhjt273h019p0170q9p730ti',
             data: JSON.stringify({
                 query: getAllArticles
             }),
