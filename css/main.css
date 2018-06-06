@@ -6502,3 +6502,7 @@ html, body {
 * {
   margin: 0;
   padding: 0; }
+
+img.masthead {
+  margin: auto;
+  max-width: 1200px; }

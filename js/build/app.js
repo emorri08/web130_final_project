@@ -14457,14 +14457,10 @@ return jQuery;
 })));
 //# sourceMappingURL=bootstrap.js.map
 
-<<<<<<< HEAD
 // David Holter and Elly Boyd
 // articles.js for final project
-/*global $*/
-/*global JS_PAGE Cookies */
-=======
-/* global $ JS_PAGE Cookies */
->>>>>>> 7113c8f9c0eb7920deeb80526aa22a501b295aaf
+// *global $*/
+// *global JS_PAGE Cookies */
 
 let getAllArticles = `
     query AllArticles {
@@ -14477,15 +14473,9 @@ let getAllArticles = `
 `;
 
 let CreateArticle = `
-<<<<<<< HEAD
     mutation CreateArticle($authorId: ID!, $title: String!, $content; String!) {
         createArticle(authorId: $authorId, title: $title, content: $content) {
             id, 
-=======
-    mutation CreateArticle($authorId: ID!, $title: String!, $content: String) {
-        createArticle(authorId: $authorId, title: $title, content: $content) {
-            id,
->>>>>>> 7113c8f9c0eb7920deeb80526aa22a501b295aaf
             title
         }
     }
@@ -14512,13 +14502,8 @@ $(document).ready(function () {
         });
     }
 
-<<<<<<< HEAD
-    //Form View
-    if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'article_form') {
-=======
     // Form View
     if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'form_view') {
->>>>>>> 7113c8f9c0eb7920deeb80526aa22a501b295aaf
         $('#save-article-button').on('click', event => {
             event.preventDefault();
             let title = $('#title').val(),
@@ -14526,11 +14511,7 @@ $(document).ready(function () {
                 authorId = Cookies.get('authorId');
 
             $.post({
-<<<<<<< HEAD
-                url: 'https://api.graph.cool/simple/v1/cjhjt273h019p0170q9p730ti',
-=======
                 url: 'https://api.graph.cool/simple/v1/cjhjspp3l43x40186ohece9if',
->>>>>>> 7113c8f9c0eb7920deeb80526aa22a501b295aaf
                 data: JSON.stringify({
                     query: CreateArticle,
                     variables: {
@@ -14539,22 +14520,12 @@ $(document).ready(function () {
                         authorId: authorId
                     }
                 }),
-<<<<<<< HEAD
-                header: {
-                    Authorization: 'Bearer ' + Cookies.get('token')
-                },
-
-                success: response => {
-                    let articles = response.data;
-                    console.log(articles);
-=======
                 headers: {
                     Authorization: 'Bearer ' + Cookies.get('token')
                 },
                 success: response => {
                     let article = response.data;
                     console.log(article);
->>>>>>> 7113c8f9c0eb7920deeb80526aa22a501b295aaf
                 },
                 contentType: 'application/json'
             });
@@ -14564,11 +14535,7 @@ $(document).ready(function () {
 
 // David Holter & Elly Boyd
 // login.js for final project
-<<<<<<< HEAD
-/*global $, JS_PAGE, Cookies*/
-=======
 // global $ JS_PAGE, Cookies
->>>>>>> 7113c8f9c0eb7920deeb80526aa22a501b295aaf
 
 let loginMutation = `
     mutation AuthenticateUser($email: String!, $password: String!) {
