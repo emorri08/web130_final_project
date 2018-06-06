@@ -23,7 +23,7 @@ let CreateArticle = `
 `;
 
 $(document).ready(function () {
-    //list view
+    // List View
     if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'list_view') {
         $.post({
             url: 'https://api.graph.cool/simple/v1/cjhjt273h019p0170q9p730ti',
@@ -32,7 +32,6 @@ $(document).ready(function () {
             }),
             success: response => {
                 let articles = response.data.allArticles;
-                console.log(articles);
                 let html = '';
                 for (let article of articles) {
                     html += `<h2>${article.title}</h2>
@@ -44,8 +43,8 @@ $(document).ready(function () {
         });
     }
 
-    //Form View
-    if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'article_form') {
+    // Form View
+    if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'form_view') {
         $('#save-article-button').on('click', event => {
             event.preventDefault();
             let title = $('#title').val(),
@@ -53,7 +52,7 @@ $(document).ready(function () {
                 authorId = Cookies.get('authorId');
 
             $.post({
-                url: 'https://api.graph.cool/simple/v1/cjhjt273h019p0170q9p730ti',
+                url: 'https://api.graph.cool/simple/v1/cjhjspp3l43x40186ohece9if',
                 data: JSON.stringify({
                     query: CreateArticle,
                     variables: {
@@ -62,13 +61,12 @@ $(document).ready(function () {
                         authorId: authorId
                     }
                 }),
-                header: {
+                headers: {
                     Authorization: 'Bearer ' + Cookies.get('token')
                 },
-
                 success: response => {
-                    let articles = response.data;
-                    console.log(articles);
+                    let article = response.data;
+                    console.log(article);
                 },
                 contentType: 'application/json'
             });
@@ -76,9 +74,9 @@ $(document).ready(function () {
     }
 });
 
-// Elly Boyd & David Holter
+// David Holter & Elly Boyd
 // login.js for final project
-/*global $, JS_PAGE, Cookies*/
+// global $ JS_PAGE, Cookies
 
 let loginMutation = `
     mutation AuthenticateUser($email: String!, $password: String!) {
@@ -108,7 +106,7 @@ $(document).ready(function () {
                 success: response => {
                     let user = response.data.authenticateUser;
                     if (user === null) {
-                        alert('Login failed! Try again.');
+                        alert('Login failed! Please try again.');
                     } else {
                         console.log(user);
                         Cookies.set('authorId', user.id, { expires: 7 });

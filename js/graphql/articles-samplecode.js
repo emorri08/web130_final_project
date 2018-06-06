@@ -1,7 +1,4 @@
-// David Holter and Elly Boyd
-// articles.js for final project
-/*global $*/
-/*global JS_PAGE Cookies */
+/* global $ JS_PAGE Cookies */
 
 let getAllArticles = `
     query AllArticles {
@@ -14,9 +11,9 @@ let getAllArticles = `
 `;
 
 let CreateArticle = `
-    mutation CreateArticle($authorId: ID!, $title: String!, $content; String!) {
+    mutation CreateArticle($authorId: ID!, $title: String!, $content: String) {
         createArticle(authorId: $authorId, title: $title, content: $content) {
-            id, 
+            id,
             title
         }
     }
@@ -26,7 +23,7 @@ $(document).ready(function() {
     // List View
     if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'list_view') {
         $.post({
-            url: 'https://api.graph.cool/simple/v1/cjhjt273h019p0170q9p730ti',
+            url: 'https://api.graph.cool/simple/v1/cjhjspp3l43x40186ohece9if',
             data: JSON.stringify({
                 query: getAllArticles
             }),

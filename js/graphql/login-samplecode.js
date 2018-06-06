@@ -1,6 +1,4 @@
-// David Holter & Elly Boyd
-// login.js for final project
-// global $ JS_PAGE, Cookies
+/* global $ JS_PAGE Cookies */
 
 let loginMutation = `
     mutation AuthenticateUser($email: String!, $password: String!) {
@@ -11,15 +9,15 @@ let loginMutation = `
     }`;
 
 $(document).ready(function() {
-    //login view
+    // Login View
     if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'login_view') {
         $('#login-button').on('click', (event) => {
             event.preventDefault();
             let username = $('#username').val(),
                 password = $('#password').val();
-            
+                
             $.post({
-                url: 'https://api.graph.cool/simple/v1/cjhjt273h019p0170q9p730ti',
+                url: 'https://api.graph.cool/simple/v1/cjhjspp3l43x40186ohece9if',
                 data: JSON.stringify({
                     query: loginMutation,
                     variables: {
@@ -30,11 +28,11 @@ $(document).ready(function() {
                 success: (response) => {
                     let user = response.data.authenticateUser;
                     if (user === null) {
-                        alert('Login failed! Please try again.');
+                        alert('Login failed! Try again.');
                     } else {
                         console.log(user);
-                        Cookies.set('authorId', user.id, {expires: 7});
-                        Cookies.set('token', user.token, {expires: 7});
+                        Cookies.set('authorId', user.id, { expires: 7 });
+                        Cookies.set('token', user.token, { expires: 7 });
                     }
                 },
                 contentType: 'application/json'
