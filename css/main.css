@@ -1,170 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two");
 .col-lg-1 {
   float: left;
   width: 8.3333333333%; }
-
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
-  .col-md-1 {
-    float: left;
-    width: 8.3333333333%; } }
-
-@media screen and (max-width: 39.99em) {
-  .col-sm-1 {
-    float: left;
-    width: 8.3333333333%; } }
 
 .col-lg-2 {
   float: left;
   width: 16.6666666667%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
-  .col-md-2 {
-    float: left;
-    width: 16.6666666667%; } }
-
-@media screen and (max-width: 39.99em) {
-  .col-sm-2 {
-    float: left;
-    width: 16.6666666667%; } }
-
 .col-lg-3 {
   float: left;
   width: 25%; }
-
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
-  .col-md-3 {
-    float: left;
-    width: 25%; } }
-
-@media screen and (max-width: 39.99em) {
-  .col-sm-3 {
-    float: left;
-    width: 25%; } }
 
 .col-lg-4 {
   float: left;
   width: 33.3333333333%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
-  .col-md-4 {
-    float: left;
-    width: 33.3333333333%; } }
-
-@media screen and (max-width: 39.99em) {
-  .col-sm-4 {
-    float: left;
-    width: 33.3333333333%; } }
-
 .col-lg-5 {
   float: left;
   width: 41.6666666667%; }
-
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
-  .col-md-5 {
-    float: left;
-    width: 41.6666666667%; } }
-
-@media screen and (max-width: 39.99em) {
-  .col-sm-5 {
-    float: left;
-    width: 41.6666666667%; } }
 
 .col-lg-6 {
   float: left;
   width: 50%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
-  .col-md-6 {
-    float: left;
-    width: 50%; } }
-
-@media screen and (max-width: 39.99em) {
-  .col-sm-6 {
-    float: left;
-    width: 50%; } }
-
 .col-lg-7 {
   float: left;
   width: 58.3333333333%; }
-
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
-  .col-md-7 {
-    float: left;
-    width: 58.3333333333%; } }
-
-@media screen and (max-width: 39.99em) {
-  .col-sm-7 {
-    float: left;
-    width: 58.3333333333%; } }
 
 .col-lg-8 {
   float: left;
   width: 66.6666666667%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
-  .col-md-8 {
-    float: left;
-    width: 66.6666666667%; } }
-
-@media screen and (max-width: 39.99em) {
-  .col-sm-8 {
-    float: left;
-    width: 66.6666666667%; } }
-
 .col-lg-9 {
   float: left;
   width: 75%; }
-
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
-  .col-md-9 {
-    float: left;
-    width: 75%; } }
-
-@media screen and (max-width: 39.99em) {
-  .col-sm-9 {
-    float: left;
-    width: 75%; } }
 
 .col-lg-10 {
   float: left;
   width: 83.3333333333%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
-  .col-md-10 {
-    float: left;
-    width: 83.3333333333%; } }
-
-@media screen and (max-width: 39.99em) {
-  .col-sm-10 {
-    float: left;
-    width: 83.3333333333%; } }
-
 .col-lg-11 {
   float: left;
   width: 91.6666666667%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
-  .col-md-11 {
-    float: left;
-    width: 91.6666666667%; } }
-
-@media screen and (max-width: 39.99em) {
-  .col-sm-11 {
-    float: left;
-    width: 91.6666666667%; } }
-
 .col-lg-12 {
   float: left;
   width: 100%; }
-
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
-  .col-md-12 {
-    float: left;
-    width: 100%; } }
-
-@media screen and (max-width: 39.99em) {
-  .col-sm-12 {
-    float: left;
-    width: 100%; } }
 
 /*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
@@ -181,7 +62,7 @@
   --orange: #D98B40;
   --yellow: #ffc107;
   --green: #28a745;
-  --teal: #20c997;
+  --teal: #00838A;
   --cyan: #17a2b8;
   --white: #FFF;
   --gray: #6c757d;
@@ -6461,7 +6342,6 @@ ul, li {
   padding: 0; }
 
 nav > ul {
-  height: 36px;
   background: #01BEAB; }
   nav > ul::after {
     display: block;
@@ -6473,25 +6353,62 @@ nav > ul > li {
 
 nav > ul#mainNav > li {
   display: inline-block; }
+  @media screen and (max-width: 47.99em) {
+    nav > ul#mainNav > li {
+      display: block; } }
 
 nav a {
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Shadows Into Light Two', monospace;
+  font-size: 1.5em;
   box-sizing: border-box;
-  height: 36px;
   background: #01BEAB;
   color: #FFF;
   text-decoration: none;
   display: block;
-  padding: 6px 8px;
+  padding: 6px 50px;
   text-align: center; }
+  @media screen and (min-width: 48em) and (max-width: 68.99em) {
+    nav a {
+      padding: 6px 35px; } }
+  @media screen and (max-width: 47.99em) {
+    nav a {
+      border-bottom: 1px solid #FFF; } }
   nav a:hover {
-    background: #D7B240;
-    color: #000;
-    text-decoration: none; }
+    background: #F27B50;
+    color: #FFF;
+    text-decoration: none;
+    text-shadow: 2px 2px 1px #000;
+    box-shadow: -2px -2px 1px #000;
+    border: 1px inset #000; }
+
+nav {
+  width: 100%;
+  background-color: #01BEAB; }
+
+ul {
+  margin: auto;
+  width: 69%; }
 
 html, body {
   margin: 0;
   padding: 0; }
+
+#bannerContainer {
+  background-color: #261600;
+  width: 100%; }
+
+#mastHeadContainer {
+  background-color: #261600;
+  margin: auto; }
+
+#mastHead {
+  margin: auto;
+  max-width: 1200px;
+  max-height: 200px; }
+
+main.container {
+  margin-top: 1em;
+  margin: auto; }
 
 .button {
   display: block;
@@ -6499,17 +6416,34 @@ html, body {
   padding: 40px auto;
   min-width: 10em; }
 
-* {
-  margin: 0;
-  padding: 0; }
+h1 {
+  margin-top: 25px;
+  padding: 15px 25px;
+  background: #F2F2F2;
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 3em;
+  font-weight: bolder;
+  color: #313335;
+  text-shadow: -2px 2px 1.5px #F24B6A;
+  border: 8px dotted #313335;
+  border-radius: 40px 5px; }
 
-img.masthead {
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-  display: block; }
+h2 {
+  margin-top: 25px;
+  width: 100%;
+  padding: 15px 25px;
+  background-color: #F2F2F2;
+  color: #00838A;
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 2.75em;
+  font-weight: bolder;
+  border: 5px dotted #A64533;
+  border-radius: 40px 5px;
+  text-shadow: -2px 2px 2.5px #261600; }
 
-h1.detail {
-  margin: 0 auto;
-  max-width: 1200px;
-  display: block; }
+p {
+  width: 100%;
+  padding: 15px 25px;
+  text-align: justify;
+  border: 1px solid #FFF;
+  color: #261600; }

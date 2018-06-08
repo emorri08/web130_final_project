@@ -14457,10 +14457,7 @@ return jQuery;
 })));
 //# sourceMappingURL=bootstrap.js.map
 
-// David Holter and Elly Boyd
-// articles.js for final project
-// *global $*/
-// *global JS_PAGE Cookies */
+/* global $ JS_PAGE Cookies */
 
 let getAllArticles = `
     query AllArticles {
@@ -14473,9 +14470,9 @@ let getAllArticles = `
 `;
 
 let CreateArticle = `
-    mutation CreateArticle($authorId: ID!, $title: String!, $content; String!) {
+    mutation CreateArticle($authorId: ID!, $title: String!, $content: String) {
         createArticle(authorId: $authorId, title: $title, content: $content) {
-            id, 
+            id,
             title
         }
     }

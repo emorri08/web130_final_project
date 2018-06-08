@@ -11,7 +11,6 @@ ul, li
 
 nav 
     > ul 
-        height: 36px
         @include clearfix
         background: $bluGrn
     
@@ -20,18 +19,43 @@ nav
         &:last-child a         
     
     > ul#mainNav > li 
-        display: inline-block 
+        display: inline-block
+        @include format(sm)
+            display: block
     a 
-        font-family: 'Inconsolata', monospace
+        font-family: 'Shadows Into Light Two', monospace
+        font-size: 1.5em
         box-sizing: border-box
-        height: 36px
         background: $bluGrn
         color: $white
         text-decoration: none
         display: block
-        padding: 6px 8px
+        padding: 6px 50px
         text-align: center
+        @include format(med)
+            padding: 6px 35px
+        @include format(sm)
+            border-bottom: 1px solid $white
+        
         &:hover 
-            background: $mustard
-            color: $black
+            background: $peachy
+            color: $white
             text-decoration: none
+            text-shadow: 2px 2px 1px $black
+            box-shadow: -2px -2px 1px $black
+            border: 1px inset $black
+        
+nav
+    width: 100%
+    background-color: $bluGrn
+    
+ul
+    margin: auto
+    width: 69%
+        
+//nav
+//    width: 69%
+//    margin: auto
+//    margin-bottom: 1em
+//    @include format(sm)
+//        width: 100% 
