@@ -1,15 +1,24 @@
 // David Holter and Elly Boyd
 // articles.js for final project
-// *global $*/
+// *global $ */
 // *global JS_PAGE Cookies */
 
 let getAllArticles = `
     query AllArticles {
-      allArticles {
-        id,
-        title,
-        content
-      }
+        allArticles {
+            id,
+            title,
+            content
+        }
+    }
+`;
+
+let getArticle = `
+    query GetArticle($id: ID) {
+        Article(id: $id) {
+            title,
+            content
+        }
     }
 `;
 
@@ -34,8 +43,10 @@ $(document).ready(function() {
                 let articles = response.data.allArticles;
                 let html = '';
                 for (let article of articles) {
-                    html += `<h2>${article.title}</h2>
-                             <p>${article.content}</p>`;
+                    html += `
+                        <h2>
+                            <a href="article_detail.html#${article.id}</h2>
+                             <p>${article.title}</p>`;
                 }
                 $('#main-content').html(html);
             },
@@ -43,6 +54,28 @@ $(document).ready(function() {
         });
     }
     
+    // Detail View
+    if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'detail_view') {
+        let article_id = window.location.hash.substring(1);
+        console.log('Article id is? ' + article_id);
+        $.post({
+            url: 'https://api.graph.cool/simple/v1/cjhjt273h019p0170q9p730ti',
+            data: JSON.stringify({
+                query: getArticle,
+                variables: {
+                    id: article_id
+                }
+            }),
+            success: (response) => {
+                let article = response.data.Article;
+                $('#article-title').html(article.title);
+                $('#article-content').html(article.content);
+            },
+            contentType: 'application/json'
+        });
+    }
+        
+        
     // Form View
     if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'form_view') {
         $('#save-article-button').on('click', (event) => {
@@ -65,8 +98,8 @@ $(document).ready(function() {
                     Authorization: 'Bearer ' + Cookies.get('token')
                 },
                 success: (response) => {
-                    let article = response.data;
-                    console.log(article);
+                    let article = response.data.createArticle;
+                    window.location = 'article_detail.html#' + article.id;
                 },
                 contentType: 'application/json'
             }); 
