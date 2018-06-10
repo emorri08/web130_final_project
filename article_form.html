@@ -1,14 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta charset="utf-8" />
     <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
-    <title>Create Article | of Tuxies and Tabbies | WEB130 | Spring 2018 | Final Project of David Holter and Elly Boyd</title>
+    
+    <title>Create Article | of Tuxies and Tabbies | WEB130 | Spring 2018 | Final Project for David Holter and Elly Boyd</title>
 </head>
-<body> 
+<body>
     <header>
+        <div id="bannerContainer">
+            <div id="mastHead" class="mastHeadContainer">
+                <img class="lgMastHead" src="img/masthead1920.png" alt="of Tuxies and Tabbies banner for large screens" />
+                <img class="medMastHead" src="img/masthead1200.png" alt="of Tuxies and Tabbies banner for medium screens" />
+                <img class="smMastHead" src="img/masthead800.png" alt="of Tuxies and Tabbies banner for small screens" />
+            </div>
+        </div>
         <nav>
             <ul id="mainNav">
                 <li class="active">
@@ -27,8 +35,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="article_detail.html">
-                        Detail
+                    <a href="#">
+                        Comics
                     </a>
                 </li>
             </ul>
@@ -36,27 +44,30 @@
     </header>
     <main class="container">
         <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-8 col-md-offset-2" id='main-content'>
-
+            <div class="col-sm-12 col-md-8" id="main-content">
                 <h1>Article Form</h1>
                 <form>
                     <div class="form-group row">
                         <label for="title" class="col-sm-2 col-form-label">Title</label>
                         <input type="text" name="title" id="title" class="form-control">
                     </div>
+                    
                     <div class="form-group row">
                         <label for="content" class="col-sm-2 col-form-label">Content</label>
                         <textarea name="content" id="content" class="form-control"></textarea>
                     </div>
+                    
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <input id="save-article-button" type="submit" value="Submit" class="btn btn-primary">
+                            <input id="save-article-button" type="submit" value="submit" class="btn btn-primary">
                         </div>
-                    </div> 
+                    </div>
+                    
                 </form>
             </div>
         </div>
-    </main>  
+    </main>
+    
     <script type="text/javascript">
         var JS_PAGE = 'form_view';
     </script>

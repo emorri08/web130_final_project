@@ -1,15 +1,14 @@
 // David Holter and Elly Boyd
 // articles.js for final project
-// *global $ */
-// *global JS_PAGE Cookies */
+/* global $ JS_PAGE Cookies */
 
 let getAllArticles = `
     query AllArticles {
-        allArticles {
-            id,
-            title,
-            content
-        }
+      allArticles {
+        id,
+        title,
+        content
+      }
     }
 `;
 
@@ -23,9 +22,9 @@ let getArticle = `
 `;
 
 let CreateArticle = `
-    mutation CreateArticle($authorId: ID!, $title: String!, $content; String!) {
+    mutation CreateArticle($authorId: ID!, $title: String!, $content: String!) {
         createArticle(authorId: $authorId, title: $title, content: $content) {
-            id, 
+            id,
             title
         }
     }
@@ -45,8 +44,12 @@ $(document).ready(function() {
                 for (let article of articles) {
                     html += `
                         <h2>
-                            <a href="article_detail.html#${article.id}</h2>
-                             <p>${article.title}</p>`;
+                            <a href="article_detail.html#${article.id}">
+                                ${article.title}
+                            </a>
+                        </h2>
+                        <p>${article.content}</p>
+                    `;
                 }
                 $('#main-content').html(html);
             },
@@ -71,12 +74,11 @@ $(document).ready(function() {
                 $('#article-title').html(article.title);
                 $('#article-content').html(article.content);
             },
-            contentType: 'application/json'
+            contentType: 'application/json' 
         });
     }
-        
-        
-    // Form View
+    
+  // Form View
     if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'form_view') {
         $('#save-article-button').on('click', (event) => {
             event.preventDefault();
@@ -85,7 +87,7 @@ $(document).ready(function() {
                 authorId = Cookies.get('authorId');
                 
             $.post({
-                url: 'https://api.graph.cool/simple/v1/cjhjspp3l43x40186ohece9if',
+                url: 'https://api.graph.cool/simple/v1/cjhjt273h019p0170q9p730ti',
                 data: JSON.stringify({
                     query: CreateArticle,
                     variables: {
@@ -99,7 +101,7 @@ $(document).ready(function() {
                 },
                 success: (response) => {
                     let article = response.data.createArticle;
-                    window.location = 'article_detail.html#' + article.id;
+                    window.location = 'article_detail.html#' + article.id; 
                 },
                 contentType: 'application/json'
             }); 

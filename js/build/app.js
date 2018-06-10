@@ -14459,16 +14459,15 @@ return jQuery;
 
 // David Holter and Elly Boyd
 // articles.js for final project
-// *global $ */
-// *global JS_PAGE Cookies */
+/* global $ JS_PAGE Cookies */
 
 let getAllArticles = `
     query AllArticles {
-        allArticles {
-            id,
-            title,
-            content
-        }
+      allArticles {
+        id,
+        title,
+        content
+      }
     }
 `;
 
@@ -14482,9 +14481,9 @@ let getArticle = `
 `;
 
 let CreateArticle = `
-    mutation CreateArticle($authorId: ID!, $title: String!, $content; String!) {
+    mutation CreateArticle($authorId: ID!, $title: String!, $content: String!) {
         createArticle(authorId: $authorId, title: $title, content: $content) {
-            id, 
+            id,
             title
         }
     }
@@ -14504,8 +14503,12 @@ $(document).ready(function () {
                 for (let article of articles) {
                     html += `
                         <h2>
-                            <a href="article_detail.html#${article.id}</h2>
-                             <p>${article.title}</p>`;
+                            <a href="article_detail.html#${article.id}">
+                                ${article.title}
+                            </a>
+                        </h2>
+                        <p>${article.content}</p>
+                    `;
                 }
                 $('#main-content').html(html);
             },
@@ -14543,7 +14546,7 @@ $(document).ready(function () {
                 authorId = Cookies.get('authorId');
 
             $.post({
-                url: 'https://api.graph.cool/simple/v1/cjhjspp3l43x40186ohece9if',
+                url: 'https://api.graph.cool/simple/v1/cjhjt273h019p0170q9p730ti',
                 data: JSON.stringify({
                     query: CreateArticle,
                     variables: {
@@ -14567,7 +14570,7 @@ $(document).ready(function () {
 
 // David Holter & Elly Boyd
 // login.js for final project
-/* global $ JS_PAGE, Cookies */
+// global $ JS_PAGE, Cookies
 
 let loginMutation = `
     mutation AuthenticateUser($email: String!, $password: String!) {
@@ -14602,7 +14605,7 @@ $(document).ready(function () {
                         console.log(user);
                         Cookies.set('authorId', user.id, { expires: 7 });
                         Cookies.set('token', user.token, { expires: 7 });
-                        // Redirect
+                        // redirect logged in user to article_form.html
                         window.location = 'article_form.html';
                     }
                 },
