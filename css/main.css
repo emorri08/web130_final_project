@@ -6467,7 +6467,7 @@ main.container {
   padding: 40px auto;
   min-width: 10em; }
 
-h1 {
+h1.elly {
   margin-top: 25px;
   padding: 15px 25px;
   background: #F2F2F2;
@@ -6507,3 +6507,48 @@ p {
   text-align: justify;
   border: 1px solid #FFF;
   color: #261600; }
+
+div.overlay {
+  margin: 40px auto 20px auto;
+  width: 100%;
+  height: 3.8em;
+  background-color: #F2AAAC;
+  z-index: 0;
+  display: block; }
+
+img.cat {
+  margin-left: 5px;
+  display: inline-block;
+  z-index: 4; }
+
+h1.david {
+  margin-left: 6px;
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 2.75em;
+  font-weight: bolder;
+  text-align: center;
+  display: inline-block;
+  z-index: 4; }
+
+div.overlay_1 {
+  margin: 40px auto 20px auto;
+  width: 100%;
+  height: 3.8em;
+  background-color: #000;
+  z-index: 0;
+  display: block; }
+
+img.cat_1 {
+  margin-left: 5px;
+  display: inline-block;
+  z-index: 4; }
+
+h1.david_1 {
+  margin-left: 6px;
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 2.75em;
+  font-weight: bolder;
+  text-align: middle;
+  color: #FFF;
+  display: inline-block;
+  z-index: 4; }
