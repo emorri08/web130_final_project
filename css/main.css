@@ -6371,7 +6371,7 @@ nav a {
     nav a {
       padding: 6px 20px; } }
   nav a:hover {
-    background: #F27B50;
+    background: #F2AAAC;
     color: #FFF;
     text-decoration: none;
     text-shadow: 2px 2px 1px #000;
@@ -6498,7 +6498,7 @@ h2 {
   h2 a {
     color: #00838A; }
   h2 a:hover {
-    color: #F27B50;
+    color: #F2AAAC;
     text-decoration: none;
     text-shadow: -3px 3px 6px #261600; }
 
