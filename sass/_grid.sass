@@ -1,18 +1,20 @@
+//_grid.sass
+
 @mixin format($format) 
     @if $format == sm 
-        @media screen and (max-width: 47.99em) 
+        @media screen and (max-width: 51.99em) 
             @content
         
     @else if $format == med 
-        @media screen and (min-width: 48em) and (max-width: 68.99em) 
+        @media screen and (min-width: 52em) and (max-width: 69.99em) 
             @content
         
     @else if $format == lg 
-        @media screen and (min-width: 69em) 
+        @media screen and (min-width: 70em) 
             @content
         
     @else if $format == medUp 
-        @media screen and (min-width: 48em) 
+        @media screen and (min-width: 52em) 
             @content
             
             
@@ -20,7 +22,7 @@
         
 @mixin show($show) 
     @if $format == small 
-        @media screen and (max-width: 47.99em) 
+        @media screen and (max-width: 51.99em) 
             @content
             
             

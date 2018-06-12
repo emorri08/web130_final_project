@@ -5,8 +5,10 @@
     <meta name="robots" content="noindex,nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
-    
+
     <title>Home (list-view) | of Tuxies and Tabbies | WEB130 | Spring 2018 | Final project of David Holter and Elly Boyd</title>
+ 
+
 </head>
 <body>
     <header>
@@ -18,24 +20,31 @@
             </div>
         </div>
         <nav>
-            <ul id="mainNav">
-                <li class="active">
-                    <a href="index.html">
+            <ul class="closed">
+                <li id="mobileMenu" class="mobile-only">
+                    <a href="#">
+                        <div id="burgerMenu">
+                            Menu
+                        </div>  
+                    </a>
+                </li>
+                <li class="home">
+                    <a href="index.html" class="home">
                         Home
                     </a>
                 </li>
-                <li>
-                    <a href="login.html">
+                <li class="login">
+                    <a href="login.html" class="login">
                         Login
                     </a>
                 </li>
-                <li>
-                    <a href="article_form.html">
+                <li class="create">
+                    <a href="article_form.html" class="create">
                         Create
                     </a>
                 </li>
-                <li>
-                    <a href="#">
+                <li class="comics">
+                    <a href="comics.html" class="comics">
                         Comics
                     </a>
                 </li>
@@ -47,14 +56,11 @@
             <div class="col-sm-12 col-md-8 col-md-offset-2" id="main-content">
                 <h1 class="comicHeadline">Tuxie and Tabby Comics</h1>
                 <p class="smallTxt">created by Elly Boyd</p>
+ 
+     
             </div>
         </div>
     </main>
-<!--
-    <script type="text/javascript">
-        var JS_PAGE = 'list_view';
-    </script> 
--->
     <script type="text/javascript" src="js/build/app.js"></script>
 </body>
 </html>
