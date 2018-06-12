@@ -1,3 +1,5 @@
+//_nav.sass
+
 html, body 
     margin: 0
     padding: 0
@@ -18,10 +20,11 @@ nav
         font-size: 1.15em
         &:last-child a         
     
-    > ul#mainNav > li 
+    > ul.closed > li 
         display: inline-block
         @include format(sm)
-            display: block
+            display: none
+            
     a 
         font-family: 'Shadows Into Light Two', monospace
         font-size: 1.5em
@@ -30,12 +33,12 @@ nav
         color: $white
         text-decoration: none
         display: block
-        padding: 6px 50px
+        padding: 6px 30px
         text-align: center
         @include format(med)
-            padding: 6px 35px
+            padding: 6px 20px
         @include format(sm)
-            border-bottom: 1px solid $white
+            //border-bottom: 1px solid $white
         
         &:hover 
             background: $peachy
@@ -52,6 +55,11 @@ nav
 ul
     margin: auto
     width: 50%
+    
+#mobileMenu
+    display: block
+    @include format(medUp)
+        display: none
         
 //nav
 //    width: 69%
