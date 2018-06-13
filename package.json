@@ -1,4 +1,4 @@
-{ 
+{
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-es2015-rollup": "^3.0.0",
@@ -13,5 +13,9 @@
     "js-cookie": "^2.2.0",
     "load-grunt-tasks": "^3.5.2",
     "rollup-plugin-babel": "^3.0.4"
+  },
+  "dependencies": {
+    "compass": "^0.1.1",
+    "react-image-gallery": "^0.8.8"
   }
 }
