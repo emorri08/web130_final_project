@@ -6540,3 +6540,21 @@ p {
   text-align: justify;
   border: 1px solid #FFF;
   color: #261600; }
+
+footer {
+  margin: 60px auto 5px auto;
+  max-width: 30em;
+  display: block; }
+
+hr {
+  display: block;
+  margin: .5em auto 0 auto;
+  max-width: 100%;
+  border-width: 3px;
+  color: #01BEAB; }
+
+p.foot {
+  margin: 0 auto;
+  color: #261600;
+  font-family: sans-serif;
+  display: block; }
