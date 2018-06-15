@@ -17,14 +17,3 @@ $(document).ready(function() {
         }
     });
 });
-
-// flipping gallery plug in code
-$(".gallery").flipping_gallery({
-    direction: "forward",
-    selector: "> a",
-    spacing: 15,
-    showMaximum: 10,
-    enableScroll: true,
-    flipDirection: "bottom",
-    autoplay: false
-});

@@ -15,7 +15,6 @@
     "rollup-plugin-babel": "^3.0.4"
   },
   "dependencies": {
-    "compass": "^0.1.1",
-    "react-image-gallery": "^0.8.8"
+    "compass": "^0.1.1"
   }
 }
